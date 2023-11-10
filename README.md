@@ -1,4 +1,4 @@
-Создаём дирректориию ```build```# HandlerWindowForm
+# HandlerWindowForm
 ### *обработчик событий оконных форм*
   *HandlerWindowForm - это класс обработчик событий оконных форм.*
 
