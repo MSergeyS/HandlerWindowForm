@@ -116,6 +116,12 @@ void FormGUI::ReDraw()
         {
             Point mouse_position = { Mouse::getPosition(*window).x,
                                      Mouse::getPosition(*window).y };
+
+            Vector2f scale = { float(1000.0) / window_->getSize().x, float(700.0) / window_->getSize().y};
+
+            mouse_position.x = mouse_position.x * scale.x;
+            mouse_position.y = mouse_position.y * scale.y;
+
             switch (event.type) {
                 case Event::Closed:
                     // Обработчик события нажатие на крестик графического окна, метод Close() закрывает окно

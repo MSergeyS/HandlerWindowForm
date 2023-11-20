@@ -4,6 +4,8 @@
 
 using namespace sf;
 
+#define SIZE_WINDOW_DEFAULT { 1000, 700 }
+
 ControlElement::ControlElement() = default;
 ControlElement::~ControlElement() = default;
 
@@ -154,7 +156,6 @@ bool ControlElement::isMouseOver(Point mouse_position)
     auto shape_region = shape_.getGlobalBounds();
     int position_x = shape_region.left + shape_region.width;
     int position_y = shape_region.top + shape_region.height;
-
 
     if (mouse_position.x < position_x &&
         mouse_position.x > shape_region.left &&
